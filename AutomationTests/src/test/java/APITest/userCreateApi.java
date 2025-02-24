@@ -1,5 +1,7 @@
 package APITest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
@@ -45,14 +47,14 @@ public class userCreateApi {
       System.out.println("Response: " + responseBody);
       
       // Assert that status code is either 201 or 406
-      Assert.assertTrue(statusCode == 201 || statusCode == 406, 
+      AssertJUnit.assertTrue(statusCode == 201 || statusCode == 406, 
               "Unexpected status code: " + statusCode);
 
       // If status code is 406, check response message
       if (statusCode == 406) {
           JSONObject jsonResponse = new JSONObject(responseBody);
           String message = jsonResponse.getString("message");
-          Assert.assertEquals(message, "User exists!", "Incorrect error message");
+          AssertJUnit.assertEquals(message, "User exists!", "Incorrect error message");
       }	
       
   }

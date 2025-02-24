@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="APITest.bookStoreApi">
+      <class name="uiTests.TestHomePage">
         <methods>
-          <include name="testGetAuthorize" invocation-numbers="0 1"/>
+          <include name="teardown"/>
+          <include name="testCardsVisible"/>
+          <include name="initialize"/>
         </methods>
-      </class> <!-- APITest.bookStoreApi -->
+      </class> <!-- uiTests.TestHomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
