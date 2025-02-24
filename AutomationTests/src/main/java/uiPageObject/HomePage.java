@@ -16,12 +16,13 @@ public class HomePage
 		return driver.getTitle();
 	}
 	
-	private By formsBtn = By.xpath("(//div[@class='card mt-4 top-card'])[2]");
-	// ".category-cards > div:nth-child(2)"	
 	private By cards = By.className(".category-cards");
+	public By formsBtn = By.cssSelector(".category-cards > div:nth-child(2)");
+	public By formsCard = (By.xpath("//h5[text()='Forms']"));
+	
 	
 	public WebElement getFormsBtn() {
-		return driver.findElement(formsBtn);
+		return driver.findElement(formsCard);
 	}
 	
 	public WebElement getCards() {

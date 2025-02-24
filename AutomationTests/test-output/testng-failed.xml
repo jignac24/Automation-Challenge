@@ -6,8 +6,8 @@
       <class name="uiTests.TestHomePage">
         <methods>
           <include name="teardown"/>
-          <include name="testCardsVisible"/>
           <include name="initialize"/>
+          <include name="testFormsCard"/>
         </methods>
       </class> <!-- uiTests.TestHomePage -->
     </classes>

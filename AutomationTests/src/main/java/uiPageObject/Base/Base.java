@@ -2,6 +2,7 @@ package uiPageObject.Base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -30,7 +31,7 @@ public class Base {
 			System.out.println(browserName + " is not a valid browser");
 		}
 		
-		// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		
 		return driver;
